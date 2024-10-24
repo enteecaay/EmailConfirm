@@ -6,11 +6,10 @@ const Confirmation = () => {
     // Function to get URL parameters
     const getUrlParams = () => {
         const params = new URLSearchParams(window.location.search);
-        console.log('params', params);
-        return {
-            email: params.get('email'),
-            code: params.get('code')
-        };
+        const email = params.get('email');
+        const code = params.get('code');
+        console.log('email,code', email, code);
+        return { email, code };
     };
 
     // Function to confirm email
